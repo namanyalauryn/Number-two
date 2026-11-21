@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard | ISBAT Student Portal</title>
+  <link rel="stylesheet" href="portal.css">
+  <style>
+    /* Internal CSS: quick-links 2x2 grid */
+    .quick-links{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;max-width:760px}
+    .quick-card{display:block;background:#ffffff;border:1px solid #d9dce6;border-radius:10px;padding:32px 24px;text-decoration:none;color:#1d2030;transition:border-color .25s,box-shadow .25s}
+    .quick-card:hover{border-color:#4F6DF5;box-shadow:0 4px 14px rgba(26,26,46,.12)}
+    .quick-card .q-label{display:block;font-size:1.25rem;font-weight:bold;margin-bottom:6px}
+    .quick-card .q-link{color:#4F6DF5}
+    @media (max-width:767px){.quick-links{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="isbat-logo.png" alt="ISBAT University logo">
+    <p class="student-name">Aisha Nansubuga</p>
+    <p class="student-id">Reg. No. 24/BIT/0123</p>
+    <ul>
+      <li><a class="current" href="dashboard.html">Dashboard</a></li>
+      <li><a href="courses.html">My Courses</a></li>
+      <li><a href="fees.html">Fee Statement</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <div class="page-top">
+      <h1>Welcome, Aisha Nansubuga</h1>
+      <span style="background:#EAF3DE;color:#27500A;padding:4px 14px;border-radius:999px;font-size:.9rem;font-weight:bold;">Active</span>
+    </div>
+    <p class="date" id="today">Saturday, 21 November 2026</p>
+
+    <div class="metrics">
+      <div class="metric-card"><span class="label">GPA</span><span class="value">4.12 / 5.00</span></div>
+      <div class="metric-card"><span class="label">Credit Hours</span><span class="value">18</span></div>
+      <div class="metric-card"><span class="label">Outstanding Fee Balance</span><span class="value">UGX 850,000</span></div>
+    </div>
+
+    <h2>Quick Links</h2>
+    <div class="quick-links">
+      <a class="quick-card" href="dashboard.html"><span class="q-label">Dashboard</span><span class="q-link">Go to dashboard</span></a>
+      <a class="quick-card" href="courses.html"><span class="q-label">My Courses</span><span class="q-link">View courses</span></a>
+      <a class="quick-card" href="fees.html"><span class="q-label">Fee Statement</span><span class="q-link">View fee statement</span></a>
+      <a class="quick-card" href="profile.html"><span class="q-label">Update Profile</span><span class="q-link">Edit profile</span></a>
+    </div>
+    <script>
+      document.getElementById("today").textContent =
+        new Date().toLocaleDateString("en-GB",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+    </script>
+  </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Loan Application | Stanbic Bank Uganda</title>
+  <link rel="stylesheet" href="dlac.css">
+</head>
+<body>
+  <div class="site-header">
+    <h1>Stanbic Bank Uganda</h1>
+  </div>
+  <div class="navbar">
+    <ul>
+      <li><a href="index.html">Loan Products</a></li>
+      <li><a class="current" href="personal-loan.html">Personal Loan Application</a></li>
+    </ul>
+  </div>
+  <div class="container">
+    <div class="form-wrap">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Personal Loan Application</legend>
+
+          <div class="field">
+            <label for="title">Title</label>
+            <select id="title" name="title">
+              <option>Mr</option><option>Mrs</option><option>Ms</option><option>Dr</option><option>Prof</option>
+            </select>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first_name" required>
+            </div>
+            <div class="field">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last_name" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="e.g. 0772 123 456" required>
+          </div>
+
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com">
+          </div>
+
+          <div class="field">
+            <label for="district">District</label>
+            <select id="district" name="district">
+              <option>Kampala</option><option>Wakiso</option><option>Mukono</option><option>Jinja</option><option>Mbarara</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="salary">Monthly Salary (UGX) <span class="hint">minimum 300,000</span></label>
+            <input type="number" id="salary" name="salary" min="300000" placeholder="e.g. 1500000">
+            <p class="eligibility" style="background:#EAF3DE; color:#27500A; padding:8px;">You appear eligible for this loan.</p>
+          </div>
+
+          <div class="field">
+            <label for="amount">Loan Amount Requested (UGX)</label>
+            <input type="number" id="amount" name="amount" placeholder="e.g. 5000000">
+          </div>
+
+          <div class="field">
+            <label for="period">Repayment Period</label>
+            <select id="period" name="period">
+              <option value="12">12 months</option><option value="24">24 months</option><option value="36">36 months</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="purpose">Loan Purpose</label>
+            <select id="purpose" name="purpose">
+              <option>School Fees</option><option>Medical</option><option>Home Improvement</option><option>Other</option>
+            </select>
+          </div>
+
+          <div class="declaration">
+            <input type="checkbox" id="declaration" name="declaration" required>
+            <label for="declaration">I confirm that the information provided is accurate.</label>
+          </div>
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Stanbic Bank Uganda | Loan portal (exercise project)</p>
+    <p>Rates and limits shown are sample figures, not official bank terms.</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* NITA-U — Uganda National IT Skills Assessment 2026 */
+:root {
+  --blue: #002147;
+  --gold: #D4AF37;
+  --ink: #14233a;
+  --muted: #5b6778;
+  --line: #cfd6df;
+  --paper: #f6f7f9;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.5;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--blue);
+  border-bottom: 4px solid var(--gold);
+}
+.site-header img { height: auto; flex-shrink: 0; }
+.site-title {
+  margin: 0;
+  font-size: clamp(1.1rem, 2.6vw, 1.7rem);
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.25;
+}
+
+/* ---------- Banner ---------- */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background: var(--blue);
+}
+.banner-img {
+  display: block;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.banner-title {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1.5rem;
+  text-align: center;
+  font-size: clamp(1.6rem, 5vw, 3rem);
+  line-height: 1.15;
+  color: #fff;
+  background: linear-gradient(rgba(0,33,71,.68), rgba(0,33,71,.78));
+  text-shadow: 0 2px 6px rgba(0,0,0,.4);
+}
+
+/* ---------- Progress indicator ---------- */
+.progress {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  margin: 0;
+  padding: 1.25rem 1rem;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .5rem 1.25rem;
+  color: var(--muted);
+  position: relative;
+}
+.step + .step::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 50%;
+  width: 2px;
+  height: 1.4rem;
+  transform: translateY(-50%);
+  background: var(--line);
+}
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  font-weight: 700;
+  font-size: .95rem;
+}
+.step.current { color: var(--blue); font-weight: 700; }
+.step.current .step-num {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--blue);
+}
+.step.current .step-label {
+  border-bottom: 3px solid var(--gold);
+  padding-bottom: 1px;
+}
+
+/* ---------- Form layout ---------- */
+.container {
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0 1rem 3rem;
+}
+
+fieldset.details {
+  margin: 0;
+  padding: 1.5rem 1.75rem 1rem;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--blue);
+  border-radius: 4px;
+}
+fieldset.details legend {
+  padding: .3rem 1rem;
+  background: var(--blue);
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.05rem;
+  border-radius: 3px;
+}
+
+/* ---------- Form groups: label on top, input below ---------- */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+.form-group > label {
+  margin-bottom: .35rem;
+  font-weight: 700;
+  color: var(--blue);
+  font-size: .95rem;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="date"],
+.form-group select {
+  width: 100%;
+  padding: .6rem .75rem;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+  border: 1px solid #98a3b3;
+  border-radius: 3px;
+}
+.form-group input:focus,
+.form-group select:focus {
+  outline: 3px solid var(--gold);
+  outline-offset: 1px;
+  border-color: var(--blue);
+}
+.form-group input:user-invalid {
+  border-color: #b3261e;
+}
+
+/* Radio groups */
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem 1.5rem;
+}
+.form-group > label.option,
+.option {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin: 0;
+  font-weight: 400;
+  color: var(--ink);
+  cursor: pointer;
+}
+.option input[type="radio"] {
+  width: 1.1rem;
+  height: 1.1rem;
+  accent-color: var(--blue);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 560px) {
+  .site-header { flex-direction: column; text-align: center; }
+  .progress { flex-direction: column; align-items: flex-start; }
+  .step + .step::before { display: none; }
+  fieldset.details { padding: 1.25rem 1rem .75rem; }
+}

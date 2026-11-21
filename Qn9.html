@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Courses | ISBAT Student Portal</title>
+  <link rel="stylesheet" href="Portal.css">
+  <style>
+    /* Internal CSS: timetable colours */
+    .timetable{table-layout:fixed;min-width:860px}
+    .timetable th,.timetable td{text-align:center;border:1px solid #d9dce6;padding:8px 4px;font-size:.85rem}
+    .timetable .day{background:#eceef5;color:#1A1A2E;width:100px}
+    .timetable .free{background:#fafafa}
+    .webtech{background:#DCE4FF;color:#1c2f8a}
+    .cprog{background:#FFE9C9;color:#7a4300}
+    .dbms{background:#D9F1E3;color:#14532d}
+    .networks{background:#F3DDF3;color:#6b1f6b}
+    .legend{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 0;padding:0;list-style:none}
+    .legend li{padding:4px 12px;border-radius:4px;font-size:.85rem}
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img src="Isbat logo.webp" alt="ISBAT University logo">
+    <p class="student-name">Aisha Nansubuga</p>
+    <p class="student-id">Reg. No. 24/BIT/0123</p>
+    <ul>
+      <li><a href="Dashboard.html">Dashboard</a></li>
+      <li><a class="current" href="Qn9.html">My Courses</a></li>
+      <li><a href="Fees.html">Fee Statement</a></li>
+    </ul>
+  </div>
+  <div class="main">
+    <h1>My Courses</h1>
+    <p class="date">Semester I, 2026/2027 | Total credit hours: 18</p>
+
+    <h2>Enrolled Courses</h2>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Course Code</th><th>Course Name</th><th>Credits</th><th>Lecturer</th><th>Room</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>BIT2101</td><td>Web Technologies</td><td>3</td><td>Mr. Joseph Ssemakula</td><td>Lab 1</td><td style="background:#E1F5EE;color:#085041;">Active</td></tr>
+          <tr><td>BIT2102</td><td>C Programming</td><td>3</td><td>Ms. Rebecca Achieng</td><td>Lab 2</td><td style="background:#E1F5EE;color:#085041;">Active</td></tr>
+          <tr><td>BIT2103</td><td>Database Systems</td><td>3</td><td>Dr. Peter Mugisha</td><td>Room B12</td><td style="background:#E1F5EE;color:#085041;">Active</td></tr>
+          <tr><td>BIT2104</td><td>Computer Networks</td><td>3</td><td>Mr. Samuel Opio</td><td>Room A04</td><td style="background:#E1F5EE;color:#085041;">Active</td></tr>
+          <tr><td>BIT2106</td><td>Discrete Mathematics</td><td>3</td><td>Mr. Brian Kato</td><td>Room B05</td><td style="background:#E1F5EE;color:#085041;">Active</td></tr>
+          <tr><td>BBA2105</td><td>Entrepreneurship and Business Skills</td><td>3</td><td>Dr. Grace Nalubega</td><td>Room A09</td><td style="background:#FAEEDA;color:#633806;">Pending</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2>Weekly Timetable</h2>
+    <div class="table-wrap">
+      <table class="timetable">
+        <thead><tr><th>Day</th><th>8–9</th><th>9–10</th><th>10–11</th><th>11–12</th><th>12–1</th><th>1–2</th><th>2–3</th><th>3–4</th><th>4–5</th></tr></thead>
+        <tbody>
+          <tr><th class="day">Monday</th><td class="webtech" colspan="2">Web Technologies<br>BIT2101</td><td class="free"></td><td class="cprog" colspan="2">C Programming<br>BIT2102</td><td class="free"></td><td class="dbms" colspan="2">Database Systems<br>BIT2103</td><td class="free"></td></tr>
+          <tr><th class="day">Tuesday</th><td class="free"></td><td class="networks" colspan="2">Computer Networks<br>BIT2104</td><td class="free"></td><td class="free"></td><td class="free"></td><td class="webtech" colspan="2">Web Technologies<br>BIT2101</td><td class="free"></td></tr>
+          <tr><th class="day">Wednesday</th><td class="cprog" colspan="2">C Programming<br>BIT2102</td><td class="free"></td><td class="dbms" colspan="2">Database Systems<br>BIT2103</td><td class="free"></td><td class="free"></td><td class="networks" colspan="2">Computer Networks<br>BIT2104</td></tr>
+          <tr><th class="day">Thursday</th><td class="free"></td><td class="webtech" colspan="2">Web Technologies<br>BIT2101</td><td class="free"></td><td class="free"></td><td class="free"></td><td class="networks" colspan="2">Computer Networks<br>BIT2104</td><td class="free"></td></tr>
+          <tr><th class="day">Friday</th><td class="dbms" colspan="2">Database Systems<br>BIT2103</td><td class="free"></td><td class="cprog" colspan="2">C Programming<br>BIT2102</td><td class="free"></td><td class="free"></td><td class="free"></td><td class="free"></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul class="legend">
+      <li class="webtech">Web Technologies (BIT2101)</li>
+      <li class="cprog">C Programming (BIT2102)</li>
+      <li class="dbms">Database Systems (BIT2103)</li>
+      <li class="networks">Computer Networks (BIT2104)</li>
+    </ul>
+  </div>
+</body>
+</html>

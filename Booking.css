@@ -1,0 +1,150 @@
+/* Serena Hotel Kampala – booking.css */
+:root {
+  --burgundy: #800020;
+  --gold: #C9A84C;
+  --ivory: #FFFFF0;
+  --ink: #2b1a1d;
+  --nav-h: 74px;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+
+body {
+  margin: 0;
+  background: var(--ivory);
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+img { max-width: 100%; }
+
+/* ---------- Navbar ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--nav-h);
+  padding: 0 2rem;
+  background: var(--burgundy);
+  border-bottom: 3px solid var(--gold);
+}
+.logo { height: 50px; width: auto; display: block; }
+.nav-links { display: flex; gap: 2rem; list-style: none; margin: 0; padding: 0; }
+.nav-links a {
+  color: var(--ivory);
+  text-decoration: none;
+  font-size: 1.05rem;
+  letter-spacing: .04em;
+  padding: .4rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav-links a:hover,
+.nav-links a:focus-visible { color: var(--gold); border-bottom-color: var(--gold); outline: none; }
+
+/* ---------- Hero ---------- */
+.hero {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  background: var(--burgundy) url("hero-serena.jpg") center / cover no-repeat;
+}
+.hero-overlay {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.75rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background: linear-gradient(rgba(60, 0, 15, .55), rgba(60, 0, 15, .7));
+}
+.hero h1 {
+  max-width: 18ch;
+  margin: 0;
+  color: var(--ivory);
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  line-height: 1.1;
+  font-weight: normal;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, .4);
+}
+.btn {
+  display: inline-block;
+  padding: .9rem 2.4rem;
+  background: var(--gold);
+  color: var(--burgundy);
+  font-weight: bold;
+  font-size: 1.05rem;
+  text-decoration: none;
+  border: 2px solid var(--gold);
+  border-radius: 2px;
+  transition: background .2s, color .2s;
+}
+.btn:hover,
+.btn:focus-visible { background: transparent; color: var(--gold); outline: none; }
+
+/* ---------- Sections ---------- */
+.section { max-width: 1100px; margin: 0 auto; padding: 4rem 1.5rem; }
+.section-alt { max-width: none; background: #f6f1de; }
+.section-alt > * { max-width: 1100px; margin-left: auto; margin-right: auto; }
+.section h2 {
+  margin: 0 0 2rem;
+  color: var(--burgundy);
+  font-size: 2rem;
+  font-weight: normal;
+  text-align: center;
+}
+.section h2::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  margin: .6rem auto 0;
+  background: var(--gold);
+}
+.muted { text-align: center; opacity: .7; }
+
+/* ---------- Room cards (Flexbox, 2 per row) ---------- */
+.room-grid { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.room-card {
+  flex: 0 0 calc(50% - .75rem);
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  background: #fff;
+  border: 1px solid var(--gold);
+  border-top: 5px solid var(--burgundy);
+}
+.room-card h3 { margin: 0 0 .25rem; color: var(--burgundy); font-size: 1.5rem; font-weight: normal; }
+.room-card .price { margin: 0 0 .75rem; font-size: 1.25rem; font-weight: bold; color: #7a5e14; }
+.room-card .price span { font-size: .85rem; font-weight: normal; color: var(--ink); opacity: .7; }
+.room-card p:last-child { margin: 0; }
+
+/* ---------- Comparison table ---------- */
+.table-wrap { overflow-x: auto; }
+.compare-table { width: 100%; min-width: 640px; border-collapse: collapse; background: #fff; }
+.compare-table th,
+.compare-table td { padding: .85rem 1rem; text-align: center; border: 1px solid #e3d8b0; }
+.compare-table thead th { background: #800020; color: #fff; font-weight: normal; letter-spacing: .03em; }
+.compare-table tbody th { text-align: left; color: var(--burgundy); background: var(--ivory); font-weight: bold; }
+.compare-table tbody tr:nth-child(even) td { background: #fbf8ea; }
+.compare-table .yes { color: #1e8a3c; font-weight: bold; font-size: 1.2rem; }
+.compare-table .no  { color: #c62828; font-weight: bold; font-size: 1.2rem; }
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 700px) {
+  .navbar { padding: 0 1rem; }
+  .nav-links { gap: 1rem; }
+  .room-card { flex-basis: 100%; }
+}

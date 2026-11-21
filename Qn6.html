@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Uganda National IT Skills Assessment 2026 | NITA-U</title>
+  <link rel="stylesheet" href="Survey.css">
+</head>
+<body>
+
+  <!-- (a) Survey header -->
+  <header class="site-header">
+    <img src="UG COAT OF ARMS.png"
+         alt="Uganda Coat of Arms"
+         style="max-width:80px;">
+    <h1 class="site-title">National Information Technology Authority — Uganda</h1>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner" aria-label="Survey banner">
+    <img src="survey-banner.jpg" alt="" class="banner-img">
+    <h2 class="banner-title">Uganda National IT Skills Assessment 2026</h2>
+  </section>
+
+  <!-- 3-step progress indicator -->
+  <nav aria-label="Survey progress">
+    <ol class="progress">
+      <li class="step current" aria-current="step">
+        <span class="step-num">1</span>
+        <span class="step-label">Respondent Details</span>
+      </li>
+      <li class="step">
+        <span class="step-num">2</span>
+        <span class="step-label">Skills Assessment</span>
+      </li>
+      <li class="step">
+        <span class="step-num">3</span>
+        <span class="step-label">Submit</span>
+      </li>
+    </ol>
+  </nav>
+
+  <main class="container">
+    <form action="#" method="post">
+
+      <!-- (b) Respondent Details -->
+      <fieldset class="details">
+        <legend>Respondent Details</legend>
+
+        <div class="form-group">
+          <label for="title">Title</label>
+          <select id="title" name="title">
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Ms">Ms</option>
+            <option value="Dr">Dr</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" required minlength="4">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="phone" pattern="\+256[0-9]{9}"
+                 placeholder="+256700123456" title="Format: +256 followed by 9 digits">
+        </div>
+
+        <div class="form-group">
+          <label for="dob">Date of Birth</label>
+          <input type="date" id="dob" name="dob">
+        </div>
+
+        <div class="form-group">
+          <label id="gender-label">Gender</label>
+          <div class="options" role="radiogroup" aria-labelledby="gender-label">
+            <label class="option"><input type="radio" name="gender" value="Male"> Male</label>
+            <label class="option"><input type="radio" name="gender" value="Female"> Female</label>
+            <label class="option"><input type="radio" name="gender" value="Prefer not to say"> Prefer not to say</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="region">Region</label>
+          <select id="region" name="region">
+            <option value="Central">Central</option>
+            <option value="Eastern">Eastern</option>
+            <option value="Northern">Northern</option>
+            <option value="Western">Western</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label id="category-label">Respondent Category</label>
+          <div class="options" role="radiogroup" aria-labelledby="category-label">
+            <label class="option"><input type="radio" name="category" value="ICT Professional"> ICT Professional</label>
+            <label class="option"><input type="radio" name="category" value="Government Officer"> Government Officer</label>
+            <label class="option"><input type="radio" name="category" value="Student"> Student</label>
+          </div>
+        </div>
+      </fieldset>
+
+    </form>
+  </main>
+
+</body>
+</html>

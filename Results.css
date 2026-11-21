@@ -1,0 +1,114 @@
+/* ===== RESET & BASE ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #222222;
+  background-color: #f7f7f7;
+}
+
+/* ===== PAGE HEADER ===== */
+header h1 {
+  text-align: center;
+  color: #1a3c6e;
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+header h2 {
+  text-align: center;
+  color: #444444;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 8px 0 20px 0;
+}
+
+/* ===== METADATA BAR ===== */
+.meta-bar {
+  background-color: #EEEEEE;
+  text-align: center;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333333;
+}
+
+/* ===== RESULTS TABLE ===== */
+main {
+  padding: 30px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+th, td {
+  border: 1px solid #cccccc;
+  padding: 10px 12px;
+  text-align: center;
+}
+
+/* Title row spanning all columns */
+thead .table-title {
+  background-color: #1a3c6e;
+  color: #ffffff;
+  font-size: 18px;
+  padding: 14px;
+}
+
+/* Column headers */
+thead .column-headers th {
+  background-color: #dde6f3;
+  color: #1a3c6e;
+}
+
+/* Left-align names */
+tbody td:nth-child(2) {
+  text-align: left;
+}
+
+/* Zebra striping */
+tbody tr:nth-child(even) {
+  background-color: #f4f7fb;
+}
+
+tbody tr:hover {
+  background-color: #fff8d6;
+}
+
+/* ===== GRADE COLOUR-CODING ===== */
+.grade-a { background-color: #c8f0cf; color: #146c2e; font-weight: bold; }
+.grade-b { background-color: #dff3c4; color: #3f6b10; font-weight: bold; }
+.grade-c { background-color: #fff3bf; color: #7a5b00; font-weight: bold; }
+.grade-d { background-color: #ffe0b3; color: #a04a00; font-weight: bold; }
+.grade-f { background-color: #f8c9c9; color: #a10f0f; font-weight: bold; }
+
+/* ===== TABLE FOOTER ===== */
+tfoot td {
+  background-color: #EEEEEE;
+  font-weight: bold;
+}
+
+tfoot .key {
+  text-align: right;
+}
+
+/* ===== PAGE FOOTER ===== */
+footer {
+  background-color: #1a3c6e;
+  color: #ffffff;
+  text-align: center;
+  padding: 18px;
+  margin-top: 20px;
+  font-size: 14px;
+}

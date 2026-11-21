@@ -1,0 +1,65 @@
+/* Stanbic Bank Uganda loan portal: all layout and styling */
+:root{--blue:#002D62;--gold:#C9A63A;--white:#fff;--bg:#f3f5f9;--border:#d3d9e3;--text:#1b2430;--muted:#55606f}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;line-height:1.6;color:var(--text);background:var(--bg)}
+a{color:var(--blue)}
+
+/* Header and navbar */
+.site-header{background:var(--white);padding:16px 24px;border-bottom:4px solid var(--gold)}
+.site-header h1{margin:0;color:var(--blue);font-size:1.8rem}
+.navbar{background:var(--blue)}
+.navbar ul{list-style:none;margin:0 auto;padding:0 24px;max-width:1100px;display:flex}
+.navbar a{display:block;padding:14px 22px;color:var(--white);text-decoration:none;font-weight:bold;transition:background .3s,color .3s}
+.navbar a:hover,.navbar a.current{color:var(--gold)}
+.navbar a:hover{background:rgba(255,255,255,.08)}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:var(--blue)}
+.hero img{display:block;width:100%;object-fit:cover}  /* height set inline (350px) */
+.hero-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,45,98,.45)}
+.hero-text p{margin:0;padding:0 20px;color:var(--white);font-size:clamp(1.6rem,4.5vw,3rem);font-weight:bold;text-align:center;text-shadow:0 2px 8px rgba(0,0,0,.5)}
+
+.container{max-width:1100px;margin:0 auto;padding:36px 24px 48px}
+h2{color:var(--blue)}
+
+/* Loan cards (flexbox) */
+.cards{display:flex;flex-wrap:wrap;gap:24px;margin-bottom:40px}
+.loan-card{flex:1 1 260px;background:var(--white);border:1px solid var(--border);border-top:5px solid var(--blue);border-radius:8px;padding:24px;text-align:center}
+.loan-card h3{margin:0 0 8px;color:var(--blue);font-size:1.4rem}
+.loan-card .rate{margin:0 0 18px;color:var(--muted)}
+.loan-card .rate strong{display:block;font-size:2rem;color:var(--blue)}
+.btn{display:inline-block;background:var(--blue);color:var(--gold);padding:12px 26px;border-radius:6px;text-decoration:none;font-weight:bold;transition:background .3s,color .3s}
+.btn:hover{background:var(--gold);color:var(--blue)}
+
+/* Comparison table */
+.table-wrap{overflow-x:auto}
+.compare{width:100%;border-collapse:collapse;background:var(--white)}
+.compare th,.compare td{border:1px solid var(--border);padding:12px 14px;text-align:center}
+.compare .table-title{background:var(--blue);color:var(--white);font-size:1.15rem}
+.compare .col-head th{background:var(--gold);color:var(--blue)}
+.compare tbody th{background:var(--bg);color:var(--blue);text-align:left}
+.note{color:var(--muted);font-size:.9rem;margin-top:12px}
+
+/* Application form */
+.form-wrap{max-width:680px;margin:0 auto}
+fieldset{background:var(--white);border:1px solid var(--border);border-top:5px solid var(--blue);border-radius:8px;padding:12px 28px 28px}
+legend{padding:0 10px;color:var(--blue);font-size:1.3rem;font-weight:bold}
+.field{margin-top:16px}
+.field label{display:block;margin-bottom:5px;font-weight:bold;color:var(--blue)}
+.field input[type="text"],.field input[type="tel"],.field input[type="email"],.field input[type="number"],.field select{width:100%;padding:10px 12px;border:1px solid #9aa6b8;border-radius:5px;font-size:1rem;background:var(--white)}
+.field input:focus,.field select:focus{outline:3px solid var(--gold);outline-offset:1px;border-color:var(--blue)}
+.row{display:flex;gap:16px}
+.row .field{flex:1}
+.hint{font-weight:normal;color:var(--muted);font-size:.85rem}
+.eligibility{margin:10px 0 0;border-radius:4px}
+.declaration{display:flex;align-items:flex-start;gap:10px;margin-top:22px}
+.declaration input{margin-top:5px;width:18px;height:18px}
+.submit-btn{display:block;width:100%;margin-top:22px;padding:14px;background:var(--blue);color:var(--gold);border:0;border-radius:6px;font-size:1.1rem;font-weight:bold;cursor:pointer;transition:background .3s}
+.submit-btn:hover{background:#00408a}
+.submit-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Footer */
+.footer{background:var(--blue);color:var(--white);text-align:center;padding:20px;border-top:4px solid var(--gold);font-size:.9rem}
+.footer p{margin:3px 0}
+
+@media (max-width:600px){.row{flex-direction:column;gap:0}fieldset{padding:8px 16px 22px}}
